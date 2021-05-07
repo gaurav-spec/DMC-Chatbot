@@ -1,0 +1,145 @@
+version : '2.0'
+
+intents :
+  - goodbye
+  - affirm
+  - deny
+  - greet
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - tell_name
+  - help
+  - request_name
+  - Drainage
+  - Electricity
+  - my_detail
+  - my_name :
+      use_entities :
+        - name
+  - mobile_number :
+      use_entities :
+        - number
+  - problem :
+      use_entities :
+        - problem
+entities :
+  - name
+  - number
+  - problem
+
+slots :
+  name :
+    type: text
+
+  number:
+    type: text
+
+  problem:
+    type: text
+
+
+responses :
+  utter_greet :
+    - text : "Hi I am from DMC,How can I help you today?"
+  utter_ask_problem :
+    - text : "{name},Do you want to complain on your Electricity/Drainage  issue in your locality?"
+#      buttons :
+#        - title : "Drainage"
+#          payload : "/problem"
+#        - title : "Electricity"
+#          payload : "/problem"
+  #        - title : "Garbage"
+  #          payload : "/Garbage"
+  #        - title : "DMC_Department"
+  #          payload : "/DMC_Department"
+  #        - title : "About_DMC"
+  #          payload : "/About_DMC"
+  utter_cheer_up :
+    - text : 'Here is something to cheer you up:'
+      image : https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help :
+    - text : Did that help you?
+#  utter_ask_Drainage :
+#    - text : "drainage problems"
+##      buttons :
+#        - title : "Blockages"
+#        - payload : "/mobile_number"
+#        - title : "Displaced/Open Joints"
+#        - payload : "/mobile_number"
+#  utter_ask_Electricity :
+#    - text : "Electricity problems"
+#      buttons :
+#        - title : "Frequent electrical surges"
+#          payload : "/mobile_number"
+#        - title : "Light switches not working properly"
+#          payload : "/mobile_number"
+  #  utter_Garbage :
+  #    - text : "What are Garbage problems you have?"
+  #      buttons :
+  #        - title : "Bacteria, insects and vermin thrive from garbage"
+  #          payload : "/mobile_number"
+  #        - title : "Overflowing waste causes air pollution and respiratory diseases"
+  #          payload : "/mobile_number"
+  #
+  #  utter_DMC_Department :
+  #    - text : "DMC Department?"
+  #      buttons :
+  #        - title : "Municipal corporations are referred to by different names in different states (due to regional language variations), all of which are translated to municipal corporation in English. These names include Nagar (in Delhi, Uttar Pradesh, Uttarakhand, Bihar, Jharkhand, Rajasthan, and Haryana)"
+  #          payload : "/mobile_number"
+  #
+  #  utter_About_DMC :
+  #    - text : "About DMC?"
+  #      buttons :
+  #        - title : "A municipal corporation is a local government in India that administers urban areas with a population of more than one million"
+  #          payload : "/mobile_number"
+  utter_happy :
+    - text : Great, carry on!
+  utter_goodbye :
+    - text : Bye
+  utter_iamabot :
+    - text : I am a bot, powered by Rasa.
+  utter_help :
+    - text : Hello! i am bot,how can I help you?
+  #  utter_name:
+  #  - text: My name is aura.
+  utter_ask_name :
+    - text : Can i ask your name?
+  utter_ask_number :
+    - text : "{name},please tell me your mobile number?"
+  #  utter_certificate :
+  #    - text : you can get NOC(No Objection Certificate) from this link here:> https://www.jaipuria.ac.in/migration_certificate/
+  utter_thanks :
+    - text : "Thanks for providing me the detail soon our coordinator will contact you"
+  utter_thankyou :
+    - text : "Thanks"
+  utter_mood_great :
+    - text : "Perfect nice"
+  utter_details_thanks :
+    - text : "Thanks for providing the given details \nName: {Name},\nMobile Number: {mobile_number},\nProblem: {problem}"
+    #  utter_ask_date:
+    #  - text : "Do you want to book an appointment"
+#  utter_submit :
+#    - text : Your name is {name} , your mobile_number is {number} and your problem is {problem}
+actions :
+  - action_submit
+  - utter_greet
+  - utter_goodbye
+  - utter_iamabot
+#  - utter_thanks
+forms :
+  user_details_form :
+    name :
+      - type : from_entity
+        entity : name
+    number :
+      - type : from_entity
+        entity : number
+    problem :
+      - type : from_entity
+        entity : problem
+
+
+session_config :
+  session_expiration_time : 60
+  carry_over_slots_to_new_session : true

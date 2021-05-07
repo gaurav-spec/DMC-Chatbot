@@ -1,0 +1,69 @@
+version: "2.0"
+
+stories:
+
+#- story: happy path
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_great
+#  - action: utter_happy
+#
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: affirm
+#  - action: utter_happy
+#
+#- story: sad path 2
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: deny
+#  - action: utter_goodbye
+
+#- story: happy path
+#  steps:
+#  - intent: problem
+#  - action: utter_problem
+#  - intent: Drainage
+#  - action: user_details_form
+#  - checkpoint: Electricity_action_checkpoint
+#
+#- story: Electricity path
+#  steps:
+#  - checkpoint: Electricity_action_checkpoint
+#  - intent : Electricity
+#  - action: user_details_form
+#  - action : action_restart
+#
+#- story: Activate form
+#  steps:
+#  - intent : greet
+#  - action : utter_greet
+#  - intent : my_detail
+##  - checkpoint: Electricity_action_checkpoint
+#  - active_loop: user_details_form
+#
+##- story: Electricity path
+##  steps:
+##  - checkpoint: Electricity_action_checkpoint
+##  - intent : Electricity
+##  - action: user_details_form
+#
+#- story: Submit form
+#  steps:
+#  # Form is deactivated
+#  - action: user_details_form
+#  - active_loop: null
+#  - slot_was_set:
+#    - requested_slot: null
+#  # The actions we want to run when the form is submitted.
+#  - action: action_submit

@@ -1,0 +1,167 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: tell_name
+  examples: |
+    - what is your name?
+    - tell me your name
+    - what other call you
+    - what should i call you?
+- intent: my_name
+  examples: |
+    - my name is [gaurav](name)
+    - my name is [rahul](name)
+    - my name is [pooja](name)
+    - [gaurav](name) is my name
+    - [gaurav](name) this side
+    - [gaurav](name)
+    - people call me [gaurav](name)
+    - [raghav](name)
+    - [Arun] (name)
+    - [sridhar] (name)
+
+- intent: mobile_number
+  examples: |
+    - my number is [7993588174](number)
+    - [7993588174](number)
+    - [7993588174](number) is my number
+    - my mobile number is [7993588174](number)
+
+- intent: appointment_date
+  examples: |
+    - my date is [30th April](date)
+    - [30 April](date)
+    - [29 April](date) is my date
+    - my date is [25 April](date)
+
+- intent: request_name
+  examples: |
+    - I want more detail.
+    - Detail
+    - more detail i want
+    - detail more i want
+    - my detail
+
+#- intent: Electricity
+#  examples: |
+#    - [powersupply](Electricity)
+#    - [powersupply](Electric)
+#    - [powersupply](electricity)
+#    - [powersupply](Electric)
+#
+#- intent: Drainage
+#  examples: |
+#    - [sewage](Drainage)
+#    - [sewage](drainage)
+#    - [sewage](drain)
+
+#- intent: Garbage
+#  examples: |
+#    - Garbage
+#    - garbage
+#
+#- intent: DMC_Department
+#  examples: |
+#    - DMC_Department
+#    - DMC_department
+#
+#- intent: About_DMC
+#  examples: |
+#    - About_DMC
+#    - about_DMC
+#    - About_dmc
+
+- intent: problem
+  examples: |
+    - [Drainage](problem)
+    - [Electricity](problem)
+    - [drainage](problem)
+    - [electricity](problem)
+- intent: my_detail
+  examples: |
+    - my_detail
+    - my_detail in my locality
+    - My_details
